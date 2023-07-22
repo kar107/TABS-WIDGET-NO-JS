@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="style.css">
+<!-- Inspired by https://dribbble.com/shots/3693442-Tabs -->
+
+<!-- Illustrations: https://undraw.co/ -->
+<main mv-app="tabs"
+		mv-bar="no-login"
+		mv-storage="https://github.com/DmitrySharabin/mavo-tabs-widget">
+	<h2 property="headline"></h2>
+	<section class="tabs" style="--count: [count(tab)];">
+		<details property="tab"
+					mv-multiple
+					open="[open]"
+					mv-action="set(open.$all, false), set(open, true)">
+			<meta property="open">
+			
+			<summary property="title">
+				<img class="icon" src="[image]" alt="Icon">
+				<span property="text"></span>
+			</summary>
+			
+			<section property="content">
+				<h3 property="headline"></h3>
+				<img property="image" src=""
+					  alt="Illustration for [headline]">
+				<p property="text"></p>
+				<a property="url" href="#">
+					<span property="destination"></span>
+				</a>
+			</section>		
+		</details>
+	</section>
+</main>
+<footer>
+	<p>
+		Want to see how it works under the hood and/or add your content? Simply <a href="?login">log in</a> with your <b>Github</b> account.
+	</p>
+	<p>
+		Made with Mavo. Want to know more? Visit the
+		<a href="https://mavo.io/">Mavo website</a>.
+	</p>
+</footer>
